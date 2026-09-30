@@ -6,6 +6,7 @@
 
 - Git for Windows 2.53.0.windows.2
 - 默认分支：`main`
+- 远程仓库：`git@github.com:0812stardust/DSHTest.git`
 
 ## 使用
 
@@ -18,9 +19,5 @@ git push
 
 ## 备注
 
-- 远程仓库尚未关联，待 GitHub 仓库创建后执行：
-  ```bash
-  git remote add origin git@github.com:<用户名>/<仓库名>.git
-  git push -u origin main
-  ```
-- GitHub SSH 走 443 端口（22 端口被网络屏蔽）。
+- GitHub 的 22 端口在本机被网络屏蔽，已通过 `~/.ssh/config` 将 `github.com` 指向 `ssh.github.com:443`。
+- `main` 分支已跟踪 `origin/main`，日常只需 `git add` / `git commit` / `git push`。
